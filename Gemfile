@@ -7,6 +7,8 @@ end
 
 ######## Mes rajouts #########
 gem 'bcrypt', '3.1.12'
+gem 'bootstrap-sass', '3.3.7'
+
 
 
 

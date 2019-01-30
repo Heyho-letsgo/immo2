@@ -9,11 +9,18 @@
   </head>
 
   <body>
+    <%= render 'layouts/header'%>
     <div class="container">
+      <a class="btn btn-primary" <%=link_to"Welcome", root_path %> </a>
+      <a class="btn btn-primary" <%=link_to"Users list", users_path %> </a>
+      <a class="btn btn-primary" <%=link_to"New user", new_user_path %> </a>    
+      <hr>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
+        
     <%= yield %>
-    <%= debug(params) if Rails.env.development? %> </div>
+    <%= debug(params) if Rails.env.development? %> 
+    </div>
   </body>
 </html>
